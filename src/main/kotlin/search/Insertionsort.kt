@@ -13,7 +13,7 @@ package search
 var insertionList = arrayOf(1,2,5,6,7,3,2,6,8) //result: 1,2,2,3,5,6,6,7,8
 
     fun main() {
-        var result = insertionSort(list)
+        var result = insertionSort(insertionList)
         for (i in 0 until result.size) {
             print(result[i])
         }
@@ -23,15 +23,14 @@ var insertionList = arrayOf(1,2,5,6,7,3,2,6,8) //result: 1,2,2,3,5,6,6,7,8
         for (i in 1..list.size-1) {
             sortPrev(list, i)
         }
-
         return list
     }
 
 private fun sortPrev(list: Array<Int>, i: Int) {
     var value = list[i]
-    println("value: ${value}")
+    // println("value: ${value}")
     var j = i - 1
-    println("j: ${j}")
+    // println("j: ${j}")
     while (j >= 0 && list[j] > value) {
         list[j + 1] = list[j]
         j--

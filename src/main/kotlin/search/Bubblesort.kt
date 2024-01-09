@@ -17,7 +17,7 @@ package search
  * Condición de parada: Continúa realizando pasadas a través de la lista hasta que no se realicen intercambios en una
  * pasada completa. En ese momento, la lista estará ordenada.
  */
-    var list = arrayOf(1,2,5,6,7,3,2,6,8) //result: 1,2,2,3,5,6,6,7,8
+    var list = arrayOf(1,2,5,6,7,3,2,6,8,1) //result: 1,2,2,3,5,6,6,7,8
 
     fun main() {
         var result = bubbleSort(list)
@@ -29,14 +29,13 @@ package search
         var swapped = true
         while(swapped) {
             swapped = false
-            for (i in 0 until list.size - 2) {
+            for (i in 0 until list.size - 1) {
                 if (list[i] > list[i + 1]) {
                     swap(list, i)
                     swapped = true;
                 }
             }
         }
-
         return list
     }
 
